@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Astronaut Lands on the Sun</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-sky color="#000000"></a-sky>
+
+      <a-sphere position="0 15 -20" radius="10" color="#FFD700" 
+                animation="property: position; to: 0 2 -20; dur: 5000; easing: easeInOutQuad; loop: true; dir: alternate"></a-sphere>
+
+      <a-box position="0 1.6 5" rotation="0 0 0" width="0.5" height="1" depth="0.5" color="#FFFFFF">
+        <a-animation attribute="position" to="0 1.6 -15" dur="8000" easing="linear" fill="forwards"></a-animation>
+      </a-box>
+
+      <a-sphere position="0 2.3 5" radius="0.3" color="#FFFFFF">
+        <a-animation attribute="position" to="0 2.3 -15" dur="8000" easing="linear" fill="forwards"></a-animation>
+      </a-sphere>
+
+      <a-sphere position="0 2.3 5" radius="0.25" color="#0000FF" opacity="0.5">
+        <a-animation attribute="position" to="0 2.3 -15" dur="8000" easing="linear" fill="forwards"></a-animation>
+      </a-sphere>
+
+      <a-entity camera look-controls position="0 1.6 10"></a-entity>
+    </a-scene>
+  </body>
+</html>
